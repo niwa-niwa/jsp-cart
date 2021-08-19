@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,9 +11,11 @@
 
 	<h1>Complete</h1>
 	
+	<% Integer total = (Integer)request.getAttribute("total"); %>
+	
 	<p>ご購入ありがとうございました。</p>
-	<p>合計金額 : 300円 </p>
-	<a href="index.jsp">戻る</a>
+	<p>合計金額 : <%= total %>円 </p>
+	<a href="index">戻る</a>
 
 </body>
 </html>
